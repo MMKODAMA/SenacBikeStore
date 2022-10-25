@@ -12,9 +12,17 @@ use App\Http\Requests\StoreCategoriaRequest;
 class CategoriaController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @OA\Get(
+     *      path="/api/categorias",
+     *      operationId="getCategoriasList",
+     *      tags={"Categorias"},
+     *      summary="Retorna a lista de Categorias",
+     *      description="Retorna o JSON da lista de Categorias",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Operação executada com sucesso"
+     *      )
+     * )
      */
     public function index()
     {
